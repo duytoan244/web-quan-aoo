@@ -1,0 +1,138 @@
+/* Đặt lại lề và sử dụng font chữ sans-serif cho hiện đại */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Nền xám nhạt và căn giữa toàn bộ trang bằng Flexbox */
+body {
+    background-color: #f0f2f5; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Khung trắng chứa form đăng nhập */
+.login-wrapper {
+    background-color: #ffffff;
+    width: 650px; /* Độ rộng của khung giống trong ảnh */
+    padding: 60px 80px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05); /* Đổ bóng mờ */
+    border-radius: 4px;
+}
+
+/* Căn giữa tiêu đề */
+.login-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.login-header h2 {
+    color: #0b1c39; /* Màu xanh đen đậm */
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.login-header p {
+    color: #555555;
+    font-size: 15px;
+}
+
+/* Khoảng cách giữa các ô nhập liệu */
+.input-field {
+    margin-bottom: 25px;
+}
+
+.input-field label {
+    display: block;
+    color: #0b1c39;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #e5e6e9;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+}
+
+.input-field input::placeholder {
+    color: #b0b0b0;
+}
+
+.input-field input:focus {
+    border-color: #cccccc;
+}
+
+/* Hàng chứa Checkbox và Forgot Password */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0b1c39;
+    cursor: pointer;
+}
+
+.remember-me input {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.forgot-pass {
+    color: #ff2020; /* Màu đỏ */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Hàng cuối chứa nút Đăng nhập và Text Đăng ký */
+.login-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.register-text {
+    font-size: 14px;
+    color: #333333;
+}
+
+.signup-link {
+    color: #ff2020;
+    text-decoration: none;
+}
+
+/* Nút Login màu đỏ */
+.login-btn {
+    background-color: #ff2020;
+    color: #ffffff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #e60000; /* Đổi màu đỏ đậm hơn một chút khi di chuột vào */
+}
