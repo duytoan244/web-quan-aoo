@@ -1,0 +1,9 @@
+.icon {
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.icon:hover {
+    transform: scaleX(-1);
+    filter:brightness(0) saturate(100%) invert(32%) sepia(90%) saturate(2000%) hue-rotate(350deg);
+}
