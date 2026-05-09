@@ -70,10 +70,6 @@ body {
     border-color: #cccccc;
 }
 
-<<<<<<< HEAD
-/* Hàng chứa Checkbox và Forgot Password */
-=======
->>>>>>> 58464be4b71bc058a78ff1fbada80f7933aa4ab1
 .remember-forgot {
     display: flex;
     justify-content: space-between;
@@ -98,19 +94,11 @@ body {
 }
 
 .forgot-pass {
-<<<<<<< HEAD
-    color: #ff2020; /* Màu đỏ */
-=======
     color: #ff2020;
->>>>>>> 58464be4b71bc058a78ff1fbada80f7933aa4ab1
     text-decoration: none;
     font-size: 14px;
 }
 
-<<<<<<< HEAD
-/* Hàng cuối chứa nút Đăng nhập và Text Đăng ký */
-=======
->>>>>>> 58464be4b71bc058a78ff1fbada80f7933aa4ab1
 .login-footer {
     display: flex;
     justify-content: space-between;
@@ -127,10 +115,6 @@ body {
     text-decoration: none;
 }
 
-<<<<<<< HEAD
-/* Nút Login màu đỏ */
-=======
->>>>>>> 58464be4b71bc058a78ff1fbada80f7933aa4ab1
 .login-btn {
     background-color: #ff2020;
     color: #ffffff;
@@ -144,10 +128,5 @@ body {
 }
 
 .login-btn:hover {
-<<<<<<< HEAD
-    background-color: #e60000; /* Đổi màu đỏ đậm hơn một chút khi di chuột vào */
-}
-=======
     background-color: #e60000;
 }
->>>>>>> 58464be4b71bc058a78ff1fbada80f7933aa4ab1

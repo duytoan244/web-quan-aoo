@@ -292,14 +292,12 @@ input[type=range] {
     font-size: 14px;
 }
 
-.subscribe-form button {
-    background-color: #ff2d2d; 
-    color: white;
+.subscribe-form button{
+    padding: 15px 25px;
     border: none;
-    padding: 0 25px;
-    font-weight: bold;
+    background: red;
+    color: white;
     cursor: pointer;
-    white-space: nowrap;
 }
 
 
