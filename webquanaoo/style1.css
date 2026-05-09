@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-/* Đặt lại lề và sử dụng font chữ sans-serif cho hiện đại */
-=======
-
->>>>>>> 58464be4b71bc058a78ff1fbada80f7933aa4ab1
 * {
     margin: 0;
     padding: 0;
@@ -10,11 +5,6 @@
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-<<<<<<< HEAD
-/* Nền xám nhạt và căn giữa toàn bộ trang bằng Flexbox */
-=======
-
->>>>>>> 58464be4b71bc058a78ff1fbada80f7933aa4ab1
 body {
     background-color: #f0f2f5; 
     height: 100vh;
@@ -23,18 +13,6 @@ body {
     align-items: center;
 }
 
-<<<<<<< HEAD
-/* Khung trắng chứa form đăng nhập */
-.login-wrapper {
-    background-color: #ffffff;
-    width: 650px; /* Độ rộng của khung giống trong ảnh */
-    padding: 60px 80px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05); /* Đổ bóng mờ */
-    border-radius: 4px;
-}
-
-/* Căn giữa tiêu đề */
-=======
 
 .login-wrapper {
     background-color: #ffffff;
@@ -45,18 +23,13 @@ body {
 }
 
 
->>>>>>> 58464be4b71bc058a78ff1fbada80f7933aa4ab1
 .login-header {
     text-align: center;
     margin-bottom: 40px;
 }
 
 .login-header h2 {
-<<<<<<< HEAD
-    color: #0b1c39; /* Màu xanh đen đậm */
-=======
     color: #0b1c39;
->>>>>>> 58464be4b71bc058a78ff1fbada80f7933aa4ab1
     font-size: 32px;
     margin-bottom: 15px;
     font-weight: 700;
@@ -67,10 +40,6 @@ body {
     font-size: 15px;
 }
 
-<<<<<<< HEAD
-/* Khoảng cách giữa các ô nhập liệu */
-=======
->>>>>>> 58464be4b71bc058a78ff1fbada80f7933aa4ab1
 .input-field {
     margin-bottom: 25px;
 }
