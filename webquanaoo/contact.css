@@ -1,92 +1,157 @@
 /* CSS RESET & GENERAL */
-.body { 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body { 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     color: #1a1a2e; 
-    line-height: 1.8; /* Tăng từ 1.6 để văn bản dễ đọc hơn */
+    line-height: 1.8; 
     background: #fff; 
 }
 
+ul {
+    list-style: none;
+}
+
 .container { 
-    max-width: 1200px; /* Nới rộng một chút so với 1140px */
+    max-width: 1200px; 
     margin: auto; 
     padding: 0 20px; 
 }
+/* ANNOUNCEMENT BAR - Thanh đen trên cùng */
+.announcement-bar {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 0;
+    text-align: center;
+}
+
+.announcement-bar p {
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.announcement-bar a {
+    color: #ffeb3b; /* Màu vàng giống yêu cầu của bạn */
+    text-decoration: underline;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.announcement-bar a:hover {
+    color: #fff;
+}
 
 /* HEADER */
-.main-header { border-bottom: 1px solid #eee; }
-
-.header-top { 
-    background: #f8f9fa; 
-    text-align: center; 
-    font-size: 14px; /* Tăng nhẹ từ 13px */
-    padding: 12px; 
-    color: #666; 
+.header-top-row {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
 }
 
-.header-middle { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 35px 5%; /* Tăng độ dày header để logo "thở" tốt hơn */
+.top-bar-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo { 
-    font-size: 30px; /* Tăng từ 28px */
-    font-weight: 800; 
-    text-transform: uppercase; 
-    letter-spacing: 2px; /* Giãn chữ rộng hơn một chút */
+.top-nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
 }
 
-.logo span { color: #ff2020; }
-
-.nav-menu a { 
-    margin: 0 22px; /* Tăng khoảng cách giữa các mục menu */
-    text-decoration: none; 
-    color: #000; 
-    font-weight: 600; 
-    font-size: 16px; 
+.top-nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
 }
 
-.header-icons i { 
-    margin-left: 25px; 
-    cursor: pointer; 
-    font-size: 20px; 
+.social-icons-top {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    filter: brightness(0) saturate(100%) invert(32%) sepia(90%) saturate(2000%) hue-rotate(350deg);
+}
+
+.main-header-row {
+    padding: 15px 0;
+}
+
+.main-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff2020;
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px;
 }
 
 /* BREADCRUMB */
 .breadcrumb-area { 
-    background-color: #fdfcfa; 
+    background-color: #f9e8c6; 
     text-align: center; 
-    padding: 130px 0; /* Tăng độ cao banner để tạo sự sang trọng */
+    padding: 80px 0;
 }
 
 .breadcrumb-area h1 { 
-    font-size: 56px; /* To và rõ ràng hơn */
-    margin-bottom: 15px; 
+    font-size: 50px;
+    margin-bottom: 10px; 
     font-weight: 700; 
-    color: #1a1a2e; 
-}
-
-.breadcrumb-area p { 
-    color: #666; 
-    font-size: 18px; 
 }
 
 /* CONTACT SECTION */
 .contact-section { 
-    padding: 120px 0; /* Tăng khoảng cách giữa các phần lớn */
+    padding: 80px 0; 
 }
 
 .map-container { 
-    margin-bottom: 100px; 
-    width: 100%; 
+    margin-bottom: 60px; 
     border-radius: 12px; 
     overflow: hidden; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .contact-grid { 
     display: flex; 
-    gap: 80px; /* Tăng khoảng cách giữa Form và Info */
+    gap: 50px; 
     flex-wrap: wrap; 
 }
 
@@ -94,41 +159,33 @@
 .contact-info { flex: 1; min-width: 280px; }
 
 .contact-form h2 { 
-    margin-bottom: 50px; 
-    font-size: 32px; 
-    font-weight: 700; 
+    margin-bottom: 30px; 
+    font-size: 28px; 
 }
 
-.contact-form textarea, .contact-form input { 
+.contact-form input, .contact-form textarea { 
     width: 100%; 
-    padding: 20px; /* Form rộng rãi hơn để dễ thao tác */
-    margin-bottom: 30px; 
+    padding: 15px; 
+    margin-bottom: 20px; 
     border: 1px solid #edeff2; 
     outline: none; 
-    background: #fff; 
     font-size: 15px;
-}
-
-.contact-form textarea { 
-    height: 180px; 
-    resize: none; 
 }
 
 .input-row { 
     display: flex; 
-    gap: 25px; 
+    gap: 20px; 
 }
 
 .btn-send { 
     background: transparent; 
-    border: 2px solid #ff2020; /* Viền đậm hơn một chút cho chắc chắn */
+    border: 2px solid #ff2020;
     color: #ff2020; 
-    padding: 20px 55px; 
+    padding: 15px 40px; 
     cursor: pointer; 
     text-transform: uppercase; 
     font-weight: 700; 
     transition: 0.3s;
-    letter-spacing: 1px;
 }
 
 .btn-send:hover { 
@@ -139,139 +196,91 @@
 /* INFO BOX */
 .info-box { 
     display: flex; 
-    align-items: flex-start; 
-    margin-bottom: 45px; /* Tăng khoảng cách giữa các hộp thông tin */
+    margin-bottom: 30px; 
 }
 
 .info-box i { 
-    font-size: 28px; 
+    font-size: 24px; 
     color: #8b8b9a; 
-    margin-right: 30px; 
-    margin-top: 5px; 
-    width: 35px; 
-    text-align: center; 
+    margin-right: 20px; 
+    width: 30px;
 }
 
-.info-box h4 { 
-    margin: 0; 
-    font-size: 20px; 
-    font-weight: 600; 
-    color: #2a2a2a; 
-}
-
-.info-box p { 
-    margin: 8px 0 0; 
-    color: #888; 
-    font-size: 16px; 
-}
+.info-box h4 { font-size: 18px; color: #333; }
+.info-box p { color: #888; }
 
 /* FOOTER */
 .footer { 
     background: #171613; 
     color: #ffffff; 
-    padding: 100px 0 40px; 
 }
 
-.newsletter { 
-    text-align: center; 
-    margin-bottom: 100px; 
-    padding-bottom: 100px; 
-    border-bottom: 1px solid #2d2d2d; 
-}
-
-.newsletter h3 { 
-    font-size: 36px; 
-    margin-bottom: 15px; 
-}
-
-.newsletter p { 
-    color: #bbb; 
-    margin-bottom: 40px; 
-}
-
-.subscribe-form { 
-    display: flex; 
-    justify-content: center; 
-}
-
-.subscribe-form input { 
-    padding: 20px 30px; 
-    width: 450px; 
-    border: none; 
-    outline: none; 
-}
-
-.subscribe-form button { 
-    padding: 20px 40px; 
-    background: #ff2020; 
-    border: none; 
-    color: #fff; 
-    cursor: pointer; 
-    font-weight: 700; 
-    text-transform: uppercase;
-}
-
-.main-footer {
-    padding: 80px 0 20px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; 
-    gap: 30px;
-}
-
-.footer-col h4 {
-    font-size: 18px;
-    margin-bottom: 25px;
-}
-
-.footer-col ul {
-    text-shadow: none;
-    padding: 0;
-}
-
-.footer-col ul li {
-    margin-bottom: 12px;
-}
-
-.footer-col ul li a {
-    color: #bbb;
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.footer-col ul li a:hover {
-    color: #ff2020;
-    padding-left: 5px;
-}
-
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 60px;
-    padding-top: 20px;
-    border-top: 1px solid #333;
-    color: #888;
-    font-size: 17px;
+.subscribe-area {
+    padding: 60px 0;
+    border-bottom: 1px solid #2d2d2d;
 }
 
 .footer-flex {
-    display: flex ;
+    display: flex;
     justify-content: space-between;
-    align-items: center;      
-    flex-wrap: nowrap;  /* Ép buộc không được xuống dòng */
-    gap: 20px;                                 
-    padding: 40px 0;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.subscribe-text h2 { font-size: 24px; margin-bottom: 5px; }
+.subscribe-text p { color: #bbb; }
+
+.subscribe-form { display: flex; flex: 1; max-width: 500px; }
+.subscribe-form input { 
+    flex: 1; 
+    padding: 15px; 
+    border: none; 
+    outline: none; 
+}
+.subscribe-form button { 
+    padding: 15px 30px; 
+    background: #ff2020; 
+    color: #fff; 
+    border: none; 
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.social-links { display: flex; gap: 15px; }
+
+.main-footer { padding: 60px 0 30px; }
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 40px;
+}
+
+.footer-col h4 { margin-bottom: 25px; font-size: 18px; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a { 
+    color: #bbb; 
+    text-decoration: none; 
+    font-size: 14px; 
+    transition: 0.3s;
+}
+.footer-col ul li a:hover { color: #ff2020; padding-left: 5px; }
+
+.footer-bottom { 
+    text-align: center; 
+    margin-top: 50px; 
+    padding-top: 30px; 
+    border-top: 1px solid #333; 
+    color: #888; 
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+    .top-bar-flex, .main-header-flex, .footer-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links { margin: 20px 0; }
     .input-row { flex-direction: column; gap: 0; }
-    .contact-grid { flex-direction: column; gap: 50px; }
-    .header-middle { padding: 25px 5%; }
-    .breadcrumb-area { padding: 80px 0; }
-    .subscribe-form input { width: 100%; }
+    .subscribe-form { width: 100%; }
 }
-
