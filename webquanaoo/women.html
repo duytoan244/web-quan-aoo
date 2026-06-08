@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="women.css">
 </head>
 <body>
+    <div class="header-wrapper" id="headerWrapper">
     <table  class="centered-table" width="100%" cellspacing="0" cellpadding="0" border="0">
     <tr>
         <td>
@@ -55,7 +56,7 @@
         </td>
     </tr>
     </table>
-    <table width="100%" border="0" bgcolor="black" cellpadding="15">
+    </div><!-- /header-wrapper -->
     <tr>
         <td align="center">
             <font color="white" size="5px">Sale Up To 50% Biggest Discounts. Hurry! Limited Period Offer</font> <a href="#" style="color:yellow;font-size: 20px;" ><strong><u> Shop Now</u></strong></a>
@@ -267,5 +268,45 @@
 </tr>
 
 </table>
+
+
+<button id="scrollTopBtn" title="Lên đầu trang" style="
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 9999;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #ff2020;
+    color: white;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255,32,32,0.4);
+    transition: opacity 0.3s, transform 0.3s;
+">&#8679;</button>
+
+
+<div id="toast" style="
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #111;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 15px;
+    z-index: 99999;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: opacity 0.4s;
+"></div>
+
+
+<script src="women.js"></script>
+
 </body>
 </html>
