@@ -166,7 +166,7 @@ input[type=range] {
     margin-top: 50px;
 }
 
-.container {
+.footer-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
@@ -203,11 +203,24 @@ input[type=range] {
 
 .subscribe-form input {
     flex: 1;
-    padding: 15px;
+    padding: 15px 20px;
     border: none;
     outline: none;
+    font-size: 14px;
+    min-width: 0; /* Quan trọng: cho phép input co lại đúng trong flexbox */
 }
 
+.subscribe-form button {
+    padding: 15px 30px;
+    background: #ff2020;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-size: 14px;
+}
 
 .social-links a {
     color: #fff;
@@ -221,74 +234,6 @@ input[type=range] {
     background: #171613; 
     color: #ffffff; 
     padding: 100px 0 40px; 
-}
-
-.newsletter { 
-    text-align: center; 
-    margin-bottom: 100px; 
-    padding-bottom: 100px; 
-    border-bottom: 1px solid #2d2d2d; 
-}
-
-.newsletter h3 { 
-    font-size: 36px; 
-    margin-bottom: 15px; 
-}
-
-.newsletter p { 
-    color: #bbb; 
-    margin-bottom: 40px; 
-}
-
-.subscribe-form { 
-    display: flex; 
-    justify-content: center; 
-}
-
-.subscribe-form input { 
-    padding: 20px 30px; 
-    width: 450px; 
-    border: none; 
-    outline: none; 
-}
-
-.subscribe-form button { 
-    padding: 20px 40px; 
-    background: #ff2020; 
-    border: none; 
-    color: #fff; 
-    cursor: pointer; 
-    font-weight: 700; 
-    text-transform: uppercase;
-}
-
-/* FOOTER */
-.footer { 
-    background: #171613; 
-    color: #ffffff; 
-    padding: 100px 0 40px; 
-}
-
-.newsletter { 
-    text-align: center; 
-    margin-bottom: 100px; 
-    padding-bottom: 100px; 
-    border-bottom: 1px solid #2d2d2d; 
-}
-
-.newsletter h3 { 
-    font-size: 36px; 
-    margin-bottom: 15px; 
-}
-
-.newsletter p { 
-    color: #bbb; 
-    margin-bottom: 40px; 
-}
-
-.subscribe-form { 
-    display: flex; 
-    justify-content: center; 
 }
 
 
@@ -356,5 +301,3 @@ input[type=range] {
     .breadcrumb-area { padding: 80px 0; }
     .subscribe-form input { width: 100%; }
 }
-
-
