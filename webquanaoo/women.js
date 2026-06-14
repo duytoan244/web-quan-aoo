@@ -15,21 +15,15 @@ if (priceRange && priceValue) {
 
 
 // ============================================================
-// 2. STICKY NAVBAR - Header dính trên cùng khi scroll xuống
+// 2. STICKY NAVBAR - Header wrapper dính trên cùng khi scroll
 // ============================================================
-const headerTable = document.querySelector('table.centered-table');
+const headerWrapper = document.getElementById('headerWrapper');
 
 window.addEventListener('scroll', function () {
-    if (window.scrollY > 80) {
-        headerTable.style.position = 'sticky';
-        headerTable.style.top = '0';
-        headerTable.style.zIndex = '1000';
-        headerTable.style.background = '#fff';
-        headerTable.style.boxShadow = '0 2px 20px rgba(0,0,0,0.12)';
-        headerTable.style.transition = 'box-shadow 0.3s';
+    if (window.scrollY > 10) {
+        headerWrapper.classList.add('scrolled');
     } else {
-        headerTable.style.boxShadow = 'none';
-        headerTable.style.background = 'transparent';
+        headerWrapper.classList.remove('scrolled');
     }
 });
 
