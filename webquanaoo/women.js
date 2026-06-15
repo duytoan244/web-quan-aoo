@@ -20,7 +20,7 @@ if (priceRange && priceValue) {
 const headerWrapper = document.getElementById('headerWrapper');
 
 window.addEventListener('scroll', function () {
-    if (window.scrollY > 10) {
+    if (window.scrollY > 10) {  
         headerWrapper.classList.add('scrolled');
     } else {
         headerWrapper.classList.remove('scrolled');
