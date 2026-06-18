@@ -3,8 +3,21 @@
     margin: 0 auto;
 }
 
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #eee;
+}
 
-
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 26px;
+    font-weight: bold;
+}
 
 
 .social-icon {
@@ -27,9 +40,6 @@
     text-align: right;
 }
 
-
-
-
 .top-nav-link {
     display: flex;
     align-items: center;
@@ -41,6 +51,20 @@
     color: #ccc;
 }
 
+.font{
+    font-size: 50px;
+}
+
+.wishlist{
+    padding-right:15px;
+    border-right:1px solid gray;
+}
+
+.order{
+    padding-left:15px;
+    padding-right:15px;
+    border-right:1px solid gray;
+}
 
 .page-header{
     background-color:#e6dcc8;
@@ -133,6 +157,150 @@ input[type=range] {
 }
 
 /* Footer */
+.site-footer {
+    background-color: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+.subscribe-area {
+    padding: 60px 0;
+    border-bottom: 1px solid #333;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.subscribe-text h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.subscribe-text p {
+    color: #bbb;
+}
+
+.subscribe-form {
+    display: flex;
+    flex: 1;
+    max-width: 500px;
+}
+
+.subscribe-form input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    outline: none;
+}
+
+.subscribe-form button {
+    background-color: #ff2020;
+    color: white;
+    border: none;
+    padding: 0 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.subscribe-form button:hover {
+    background-color: #d11a1a;
+}
+
+.social-links a {
+    color: #fff;
+    margin-left: 15px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* 2. Phần Main Footer */
+.main-footer {
+    padding: 80px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; 
+    gap: 30px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.footer-col ul {
+    text-shadow: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #ff2020;
+    padding-left: 5px;
+}
+
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    color: #888;
+    font-size: 17px;
+}
+
+.subscribe-form {
+    display: flex;          /* Đưa input và button lên cùng 1 hàng */
+    align-items: stretch;    /* Chiều cao bằng nhau */
+    width: 500px;           /* Độ dài tổng thể */
+    margin: 0 auto;         /* Căn giữa cụm này */
+}
+
+.subscribe-form input[type="email"] {
+    flex: 1;                /* Chiếm hết phần còn lại của 500px */
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    background: #ffffff;    /* Màu trắng cho ô nhập liệu */
+    color: #333;            /* Màu chữ người dùng gõ vào */
+    font-size: 14px;
+}
+
+.subscribe-form button {
+    background-color: #ff2d2d; 
+    color: white;
+    border: none;
+    padding: 0 25px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+
 .footer-content {
     display: flex;
     justify-content: space-between; /* Chia đều 3 cột */
@@ -210,8 +378,8 @@ input[type=range] {
 
 .newsletter-form input {
     flex: 1;           /* Giữ ô input co giãn theo khung */
-    padding: 20px;     /* TĂNG CÁI NÀY: Để ô cao hơn và chữ bên trong thoáng hơn (ví dụ từ 10px lên 20px) */
-    font-size: 18px;   /* TĂNG CÁI NÀY: Để chữ người dùng nhập vào to rõ hơn */
+    padding: 20px;     /* ô cao hơn và chữ bên trong thoáng hơn */
+    font-size: 18px;   /* Để chữ người dùng nhập vào to rõ hơn */
     border: none;
     outline: none;
     min-width: 300px;  /* TĂNG CÁI NÀY: Để đảm bảo ô luôn rộng tối thiểu bao nhiêu đó pixel */
