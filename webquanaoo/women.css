@@ -1,344 +1,110 @@
-/* Wrapper bao ngoài header - full 100% để sticky đúng */
-.header-wrapper {
+/* Sidebar lọc sản phẩm */
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    font-family: inherit;
+    border: 1px solid #eee;
+}
+.filter-select {
     width: 100%;
-    background: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: none;
-    transition: box-shadow 0.3s;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    color: #666;
+    appearance: none;
+}
+input[type=range] {
+    width: 100%;
+    accent-color: #ff2020;
+}
+.container {
+    display: block;
+    margin-bottom: 10px;
+}
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    height: 18px;
+    width: 18px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+.container input:checked ~ .checkmark {
+    background-color: #ff2020;
+    border-color: #ff2020;
 }
 
-.header-wrapper.scrolled {
-    box-shadow: 0 2px 20px rgba(0,0,0,0.12);
+/* Grid sản phẩm */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px;
 }
-
-.centered-table {
-    width: 90%;
+.product-card {
+    text-decoration: none;
+    color: #444;
+    text-align: center;
+    display: block;
+}
+.product-card img {
+    width: 70%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    display: block;
     margin: 0 auto;
 }
-
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 80px;
-    background: #eee;
+.product-card .img-wrap {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 70%;
 }
-
-.logo{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 26px;
+.product-card .add-btn {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: bottom 0.35s ease;
+    cursor: pointer;
+}
+.product-card:hover .add-btn {
+    bottom: 0;
+}
+.product-card:hover img {
+    transform: scale(1.07);
+}
+.product-name {
+    margin: 15px 0 5px 0;
+    font-size: 16px;
+}
+.product-price {
+    font-size: 15px;
+}
+.product-price .new {
+    color: #b08f26;
     font-weight: bold;
 }
-
-
-.social-icon {
-    display: inline-block;
-    transition: transform 0.3s;
-    gap: 12px;
-}
-
-.social-icon:hover {
-    transform: scaleX(-1);
-    filter:brightness(0) saturate(100%) invert(32%) sepia(90%) saturate(2000%) hue-rotate(350deg);
-}
-
-.header-right-top {
-    display: flex;             /* Ép các div con nằm hàng ngang */
-    justify-content: flex-end; 
-    align-items: center;      
-    white-space: nowrap;       /* Tuyệt đối không cho phép rớt dòng */
-    width: 100%; 
-    text-align: right;
-}
-
-
-.top-nav-links {
-    display: flex;
-    align-items: center;
-    font-size: 13px;
-}
-
-.separator {
-    margin: 0 10px;            /* Khoảng cách 2 bên thanh gạch đứng */
+.product-price .old {
     color: #ccc;
-}
-
-.font{
-    font-size: 50px;
-}
-
-.wishlist{
-    padding-right:15px;
-    border-right:1px solid gray;
-}
-
-.order{
-    padding-left:15px;
-    padding-right:15px;
-    border-right:1px solid gray;
-}
-
-.page-header{
-    background-color:#e6dcc8;
-    text-align:center;
-    padding:60px 0;
-}
-
-.page-header h1{
-    font-size:40px;
-    margin-bottom:10px;
-}
-
-.page-header p{
-    font-size:16px;
-    color:#666;
-}
-
-.page-header a{
-    text-decoration:none;
-    color:#666;
-}
-
-.page-header span{
-    margin:0 10px;
-}
-
-.centered-table a{
-    margin-right:20px;
-    text-decoration:none;
-    color:black;
-}
-
-/* Hover đỏ cho các link điều hướng chính (Home, Men, Women, Pages, Contact) */
-.nav-link a {
-    position: relative;
-    transition: color 0.25s ease;
-}
-
-.nav-link a:hover {
-    color: #ff2020 !important;
-}
-
-/* Gạch chân đỏ chạy ra khi hover */
-.nav-link a::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #ff2020;
-    transition: width 0.3s ease;
-}
-
-.nav-link a:hover::after {
-    width: 100%;
-}
-
-h2 a{
-    margin: 0 35px;
-}
-
-.sidebar {
-  width: 250px;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-  border: 1px solid #eee;
-}
-
-.filter-select {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 25px; /* Bo tròn mạnh */
-  border: 1px solid #ddd;
-  color: #666;
-  appearance: none; /* Ẩn mũi tên mặc định để tự thêm icon */
-}
-
-/* Thanh trượt giá màu đỏ */
-input[type=range] {
-  width: 100%;
-  accent-color: #ff3366; 
-}
-
-
-.container input:checked ~ .checkmark {
-  background-color: #ff3366;
-  border-color: #ff3366;
-}
-
-.checkmark {
-  height: 18px;
-  width: 18px;
-  border: 1px solid #ccc;
-  border-radius: 50%; /* Hình tròn */
-  display: inline-block;
-}
-
-.container input {
-  position: absolute;
-  opacity: 0; 
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.container {
-    display: block; /* Ép mỗi label xuống một dòng riêng biệt */
-    margin-bottom: 10px; 
-}
-
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none; /* Ấn */
-}
-
-/* Tổng thể Footer */
-.site-footer {
-    background-color: #111;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    margin-top: 50px;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-/* 1. Phần Subscribe */
-.subscribe-area {
-    padding: 60px 0;
-    border-bottom: 1px solid #333;
-}
-
-.footer-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.subscribe-text h2 {
-    font-size: 24px;
-    margin-bottom: 5px;
-}
-
-.subscribe-text p {
-    color: #bbb;
-}
-
-.subscribe-form {
-    display: flex;
-    flex: 1;
-    max-width: 500px;
-}
-
-.subscribe-form input {
-    flex: 1;
-    padding: 15px 20px;
-    border: none;
-    outline: none;
-    font-size: 14px;
-    min-width: 0; /* Quan trọng: cho phép input co lại đúng trong flexbox */
-}
-
-.subscribe-form button {
-    padding: 15px 30px;
-    background: #ff2020;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-weight: 700;
-    text-transform: uppercase;
-    white-space: nowrap;
-    font-size: 14px;
-}
-
-.social-links a {
-    color: #fff;
-    margin-left: 15px;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-/* 2. Phần Main Footer */
-.footer { 
-    background: #171613; 
-    color: #ffffff; 
-    padding: 100px 0 40px; 
-}
-
-
-
-.main-footer {
-    padding: 80px 0 20px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; 
-    gap: 30px;
-}
-
-.footer-col h4 {
-    font-size: 18px;
-    margin-bottom: 25px;
-}
-
-.footer-col ul {
-    text-shadow: none;
-    padding: 0;
-}
-
-.footer-col ul li {
-    margin-bottom: 12px;
-}
-
-.footer-col ul li a {
-    color: #bbb;
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.footer-col ul li a:hover {
-    color: #ff2020;
-    padding-left: 5px;
-}
-
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 60px;
-    padding-top: 20px;
-    border-top: 1px solid #333;
-    color: #888;
-    font-size: 17px;
-}
-
-.footer-flex {
-    display: flex ;
-    justify-content: space-between;
-    align-items: center;      
-    flex-wrap: nowrap;  /* Ép buộc không được xuống dòng */
-    gap: 20px;                                 
-    padding: 40px 0;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .input-row { flex-direction: column; gap: 0; }
-    .contact-grid { flex-direction: column; gap: 50px; }
-    .header-middle { padding: 25px 5%; }
-    .breadcrumb-area { padding: 80px 0; }
-    .subscribe-form input { width: 100%; }
+    text-decoration: line-through;
+    margin-left: 10px;
 }
