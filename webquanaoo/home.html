@@ -62,12 +62,12 @@
         </td>
     </tr>
     </table>
-<table>
-    <tr><a href="women.html"><img src="/image/99.png" alt="Error!" title="Shop Now!!" width="100%" ></a></tr>
-</table>
+<div class="banner">
+    <img id="banner" src="../image/bannernu2.jpg" alt="">
+</div>
 <div class="container">
     <div class="card">
-      <img src="../image/bannernam.jpg" alt="Error">
+      <img src="../image/nam.jpg" alt="Error">
 
       <div class="lopphu">
         <h2>Men's Fashion</h2>
@@ -76,7 +76,7 @@
     </div>
 
     <div class="card">
-      <img src="../image/bannernu.jpg" alt="Error">
+      <img src="../image/nu.jpg" alt="Error">
 
       <div class="lopphu">
         <h2>Women's Fashion</h2>
@@ -247,6 +247,17 @@
 <a href="#" class="back-to-top">^</a>
 <a href="#" class="back-to-top">^</a>
 <script>
+const banners = [
+    "../image/bannernu2.jpg",
+    "../image/bannernam2.jpg"
+];
+
+let index = 0;
+
+setInterval(() => {
+    index = (index + 1) % banners.length;
+    document.getElementById("banner").src = banners[index];
+}, 3000); 
 const danhsach = document.querySelector(".danhsachsanpham");
 function truotphai(){
     const dau = danhsach.children[0];
