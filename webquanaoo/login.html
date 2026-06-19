@@ -3,40 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="style1.css">
+    <title>Đăng nhập – 3Tclothes</title>
+    <!-- Chỉ dùng login.css, KHÔNG dùng common.css để tránh xung đột -->
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
 
     <div class="login-wrapper">
         <div class="login-header">
-            <h2>Login</h2>
-            <p>Enter Login details to get access</p>
+            <!-- Dùng logo của bạn, đường dẫn tương đối -->
+            <img src="/image/lo.png" alt="3Tclothes" style="width: 80px; margin-bottom: 15px;">
+            <h2>Đăng nhập</h2>
+            <p>Nhập thông tin tài khoản để truy cập</p>
         </div>
 
         <form action="#">
             <div class="input-field">
-                <label for="username">Username Or Email Address</label>
+                <label for="username">Tên đăng nhập hoặc Email</label>
                 <input type="text" id="username" placeholder="Username / Email address">
             </div>
 
             <div class="input-field">
-                <label for="password">Password</label>
+                <label for="password">Mật khẩu</label>
                 <input type="password" id="password" placeholder="Enter Password">
             </div>
 
             <div class="remember-forgot">
                 <label class="remember-me">
-                    <input type="checkbox"> Keep Me Logged In
+                    <input type="checkbox"> Duy trì đăng nhập
                 </label>
-                <a href="#" class="forgot-pass">Forgot Password?</a>
+                <a href="#" class="forgot-pass">Quên mật khẩu?</a>
             </div>
 
             <div class="login-footer">
                 <span class="register-text">
-                    Don't have an account? <a href="#" class="signup-link">Sign Up</a> here
+                    Chưa có tài khoản? <a href="#" class="signup-link">Đăng ký ngay</a>
                 </span>
-                <button type="submit" class="login-btn">Login</button>
+                <button type="submit" class="login-btn">Đăng nhập</button>
             </div>
         </form>
     </div>

@@ -3,195 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3Tclothes</title>
+    <title>Cart – 3Tclothes</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        .cart-table { width: 100%; border-collapse: collapse; margin: 30px 0; }
+        .cart-table th, .cart-table td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
+        .cart-table th { font-weight: 700; color: #111; }
+        .qty-box { display: inline-flex; border: 1px solid #ddd; align-items: center; }
+        .qty-box input { width: 40px; height: 40px; border: none; text-align: center; outline: none; }
+        .qty-box .qty-btn { width: 25px; height: 20px; text-align: center; line-height: 20px; cursor: pointer; border-left: 1px solid #ddd; font-size: 12px; background: #fafafa; }
+        .qty-box .qty-btn:hover { background: #ff2020; color: #fff; }
+        .cart-summary { text-align: right; margin-top: 20px; }
+        .cart-summary .total { font-size: 20px; font-weight: 700; margin: 10px 0; }
+        @media (max-width: 768px) { .cart-table th, .cart-table td { font-size: 14px; } }
+    </style>
 </head>
 <body>
-<table id="concac" width="80%" border="0" align="center">
-    <tr>
-        <td cell>
-            About Us &nbsp;&nbsp;
-            Privacy &nbsp;&nbsp;
-            FAQ &nbsp;&nbsp;
-        </td>
-        <td align="right" >
-            My Wishlist &nbsp;&nbsp;
-            Track Your Order &nbsp;&nbsp;
-            <a href="https://facebook.com" target="_blank"><img src="/image/fb.png" width="17px" height="17px"></a> &nbsp;&nbsp;
-            <a href="http://instagram.com" target="_blank"><img src="/image/ins.png" width="17px" height="17px"></a> &nbsp;&nbsp;
-            <a href="https://x.com" target="_blank"><img src="/image/x.png" width="17px" height="17px"></a> &nbsp;&nbsp;
-            <a href="https://youtube.com" target="_blank"><img src="/image/yt.png" width="17px" height="17px"></a> &nbsp;&nbsp;
-        </td>
-    </tr>
-</table>
-<table width="80%" border="0" align="center">
-    <tr>
-        <td>
-            <h1><b><a href="home.html"><img src="/image/logi.png" width="50px" height="50px">3Tclothes</a></b></h1>
-        </td>
-        <td align="center" style="padding-left:80px;">
-           <h2><a href="home.html">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Men &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="women.html">Women</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Pages &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </h2>
-        </td>
-        <td align="right">
-            <a href="searching.html"><img src="/image/searching.png" width="30px" height="30px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="account.html"><img src="/image/account.png" width="30px" height="30px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="cart.html"><img src="/image/cart.png" width="30px" height="30px"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </td> 
-    </tr>
-</table>
-<table width="100%" border="0" bgcolor="black" cellpadding="15">
-    <tr>
-        <td align="center">
-            <font color="white">Sale Up To 50% Biggest Discounts. Hurry! Limited Period Offer</font> <a href="#" style="color:yellow"><strong><u> Shop Now</u></strong></a>
-        </td>
-    </tr>
-</table>
-<table width="100%" border="0" align="center">
-    <tr align="center" bgcolor="#f5efe6" border="0" width="100%" cellpadding="20" height="150px">
-        <td>
-            <h2><b>Cart</b></h2>
-            <h4>Home | Cart</h4>
-        </td>
-    </tr>
-</table>
-<table width="70%" border="0" align="center" cellpadding="20" style="font-family: sans-serif; border-collapse: collapse;">
-    <thead>
-        <tr style="border-bottom: 1px solid #bababa; font-size: 14px;">
-            <th align="left" width="250px" cellingpadding="10px" padding-left="15px" font-size: 14px><b>Product</b></th>
-            <th align="right" width="30px" cellingpadding="0px" font-size: 14px><b>Price</b></th>
-            <th align="right" width="50px" cellingpadding="10px" font-size: 14px><b>Quantity</b></th>
-            <th align="right" width="60px" cellingpadding="10px" font-size: 14px><b>Total</b></th>      
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Minimalistic shop for multipurpose use</td>
-            <td align="right" width="30px" 0;>$360.00</td>
-            <td align="right" width="50px" 0;>
-                <div style="display: inline-flex; border: 1px solid #bababa; align-items: center;">
-                    <input type="text" value="3" readonly style="width: 40px; height: 40px; border: none; text-align: center; outline: none;">
-                    <div style="display: flex; flex-direction: column; border-left: 1px solid #bababa;">
-                        <span style="width: 25px; height: 20px; text-align: center; line-height: 20px; cursor: pointer; border-bottom: 1px solid #ffffff; font-size: 10px; background: #ffffff;">+</span>
-                        <span style="width: 25px; height: 20px; text-align: center; line-height: 20px; cursor: pointer; font-size: 10px; background: #ffffff;">-</span>
-                    </div>
-                </div>
-            </td>
-            <td align="right" width="60px" 0;>$720.00</td>
-        </tr>
-        <tr>
-            <td>Minimalistic shop for multipurpose use</td>
-            <td align="right" width="30px" 0;>$360.00</td>
-            <td align="right" width="50px" 0;>
-                <div style="display: inline-flex; border: 1px solid #bababa; align-items: center;">
-                    <input type="text" value="3" readonly style="width: 40px; height: 40px; border: none; text-align: center; outline: none;">
-                    <div style="display: flex; flex-direction: column; border-left: 1px solid #bababa;">
-                        <span style="width: 25px; height: 20px; text-align: center; line-height: 20px; cursor: pointer; border-bottom: 1px solid #ffffff; font-size: 10px; background: #ffffff;">+</span>
-                        <span style="width: 25px; height: 20px; text-align: center; line-height: 20px; cursor: pointer; font-size: 10px; background: #ffffff;">-</span>
-                    </div>
-                </div>
-            </td>
-            <td align="right" width="60px" 0;>$720.00</td>
-        </tr>
-        <tr>
-            <td><button style="background: #ff2020; color: white; border: none; padding: 12px 30px; border-radius: 25px; cursor: pointer;">Update cart</button></td>
-            <td align ="right" width="100px"><button style="background: #ff2020; color: white; border: none; padding: 12px 30px; border-radius: 25px; cursor: pointer;">Close Coupon</button></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td align="right" width="50px" font-size: 14px>Subtotal</td>
-            <td align="right" width="60px" 0; font-size: 14px>$2160.00</td>
-        </tr>
-        <tr cellpadding="1px" font-size: 14px>
-            <td></td>
-            <td></td>
-            <td align="right" width="50px" font-size: 14px><b>Shipping</b></td>
-            <td align="right" width="60px" 0; font-size: 14px padding: 1px>
-                 Flat Rate: $5.00  <input type="checkbox" checked = "checked" value="giaship"/>
-            </td>
-        </tr>
-        <tr cellpadding="1px" font-size: 14px>
-            <td></td>
-            <td></td>
-            <td> </td>
-            <td align="right" width="60px" 0; font-size: 14px padding: 1px>
-                Free Shipping <input type="checkbox" checked = "checked" value="giaship"/> 
-            </td>
-        </tr>
-        <tr cellpadding="1px" font-size: 14px>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td align="right" width="60px" 0; font-size: 14px padding: 1px>
-                Flat Rate: $10.00 <input type="checkbox" checked = "checked" value="giaship"/>
-            </td>
-        </tr>
-        <tr cellpadding="1px" font-size: 14px>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td align="right" width="60px" 0; font-size: 14px padding: 1px>
-                Local Delivery:$2.00  <input type="checkbox" checked = "checked" value="giaship"/>
-            </td>
-        </tr>
-        <tr cellpadding="1px" font-size: 14px>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td align="right" width="60px" 0; font-size: 14px padding: 1px>
-                Calculate Shipping 
-            </td>
-        </tr>
-        <tr cellpadding="1px" font-size: 14px>
-            <td></td>
-            <td></td>
-            <td align="right" width="60px" 0; font-size: 14px padding: 1px colspan= 2>
-                <select name="thanh_pho">  
-                    <option value="bangladesh">bangladesh</option>  
-                    <option value="vietnam" selected>VietNam</option>  
-                    <option value="china">China</option>  
-                </select> 
-            </td>
-        </tr>
-        <tr cellpadding="1px" font-size: 14px>
-            <td></td>
-            <td></td>
-            <td align="right" width="60px" 0; font-size: 14px padding: 1px colspan= 2>
-                <select name="thanh_pho">  
-                    <option>Select a state</option>  
-                    <option selected>Select a state</option>  
-                    <option>Select a state</option>  
-                </select> 
-            </td>
-        </tr>
-        <tr cellpadding="1px" font-size: 14px>
-            <td></td>
-            <td></td>
-            <td align="right" width="60px" 0; font-size: 14px padding: 1px colspan= 2>
-                <form action="" method="GET">  
-                <textarea name="gioi_thieu" cols="30" rows="2" placeholder=" Postcode / Zipcode"> 
-                </textarea>
-                </form>  
-            </td>
-        </tr>
-        <tr cellpadding="1px" font-size: 14px>
-            <td></td>
-            <td></td>
-            <td align="right" width="60px" 0; font-size: 14px padding: 1px colspan= 2>
-                <button style="background: #ff2020; color: white; border: none; padding: 12px 30px; border-radius: 25px; cursor: pointer;">Update Details</button>
-            </td>
-        </tr>
-        <tr cellpadding="1px" font-size: 14px>
-            <td> 
-                <button style="background: #ff2020; color: white; border: none; padding: 12px 30px; border-radius: 25px; cursor: pointer;">Continue Shopping</button>
-                <button style="background: #ff2020; color: white; border: none; padding: 12px 30px; border-radius: 25px; cursor: pointer;">Proceed to Checkout</button>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-            </td>
-    </tbody>
-</table>
+    <div class="header-wrapper" id="headerWrapper">
+        <table class="centered-table" width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <td><div class="top-nav"><a href="home.html">About Us</a><a href="home.html">Privacy</a><a href="home.html">FAQ</a><a href="home.html">Careers</a></div></td>
+                <td class="header-right-top" style="width: 195%;">
+                    <div class="top-nav-link"><span>My Wishlist</span><span class="separator">|</span><span>Track Your Order</span><span class="separator">|</span></div>
+                    <a href="#"><img src="/image/fb.png" class="social-icon" width="17" height="17"></a>
+                    <a href="#"><img src="/image/ins.png" class="social-icon" width="17" height="17"></a>
+                    <a href="#"><img src="/image/x.png" class="social-icon" width="17" height="17"></a>
+                    <a href="#"><img src="/image/yt.png" class="social-icon" width="17" height="17"></a>
+                </td>
+            </tr>
+            <tr>
+                <td width="33%" style="vertical-align: middle;"><div class="logo-wrap"><img src="/image/logi.png" width="50" height="50">3Tclothes</div></td>
+                <td width="34%" align="center" class="nav-link" style="vertical-align: middle; padding: 32px 0;">
+                    <a href="home.html">Home</a><a href="men.html">Men</a><a href="women.html">Women</a><a href="pages.html">Pages</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+                </td>
+                <td width="33%" align="right" style="vertical-align: middle;">
+                    <a href="cart.html"><img src="/image/cart.png" width="30" style="display:inline-block;"></a>
+                    <a href="login.html"><img src="/image/account.png" width="30" style="display:inline-block;"></a>
+                    <a href="search.html"><img src="/image/searching.png" width="30" style="display:inline-block;"></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- ANNOUNCEMENT -->
+    <table width="100%" border="0" bgcolor="black" cellpadding="25">
+        <tr><td align="center" id="announcementTd">
+            <font color="white" size="5">🔥 Sale Up To 50% Biggest Discounts!</font>
+            <a href="#" style="color:#ffd700;font-size:25px;font-weight:bold;text-decoration:underline;">Shop Now</a>
+        </td></tr>
+    </table>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <h1>Cart</h1>
+        <p><a href="home.html">Home</a><span>|</span>Cart</p>
+    </div>
+
+    <!-- CART CONTENT -->
+    <div class="container">
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Minimalistic shop for multipurpose use</td>
+                    <td>$360.00</td>
+                    <td>
+                        <div class="qty-box">
+                            <input type="text" value="3" readonly>
+                            <div><div class="qty-btn">+</div><div class="qty-btn">-</div></div>
+                        </div>
+                    </td>
+                    <td>$720.00</td>
+                </tr>
+                <tr>
+                    <td>Minimalistic shop for multipurpose use</td>
+                    <td>$360.00</td>
+                    <td>
+                        <div class="qty-box">
+                            <input type="text" value="3" readonly>
+                            <div><div class="qty-btn">+</div><div class="qty-btn">-</div></div>
+                        </div>
+                    </td>
+                    <td>$720.00</td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <button class="btn-primary" style="margin-right:10px;">Update Cart</button>
+                        <button class="btn-outline">Close Coupon</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="cart-summary">
+            <p>Subtotal: <strong>$2160.00</strong></p>
+            <p>Shipping: <span style="color:#888;">Flat Rate: $5.00</span></p>
+            <div class="total">Total: $2165.00</div>
+            <button class="btn-primary" style="width:200px;">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="subscribe-area">
+            <div class="footer-container footer-flex">
+                <div class="subscribe-text"><h2>Subscribe Newsletter</h2><p>Subscribe to get 5% on all products.</p></div>
+                <div class="subscribe-form"><input type="email" placeholder="Enter your email" id="footerEmail"><button id="footerSubBtn">Subscribe</button></div>
+                <div class="social-links">
+                    <a href="#"><img src="/image/fb.png" width="24" height="24"></a>
+                    <a href="#"><img src="/image/ins.png" width="24" height="24"></a>
+                    <a href="#"><img src="/image/x.png" width="24" height="24"></a>
+                    <a href="#"><img src="/image/yt.png" width="24" height="24"></a></div>
+            </div>
+        </div>
+        <div class="main-footer">
+            <div class="footer-container footer-grid">
+                <div class="footer-col brand-info"><img src="/image/lo.png" alt="3Tclothes" class="footer-logo"></div>
+                <div class="footer-col"><h4>Shop Men</h4><ul><li><a href="#">Clothing Fashion</a></li><li><a href="#">Winter</a></li><li><a href="#">Summer</a></li><li><a href="#">Formal</a></li><li><a href="#">Casual</a></li></ul></div>
+                <div class="footer-col"><h4>Shop Women</h4><ul><li><a href="#">Clothing Fashion</a></li><li><a href="#">Winter</a></li><li><a href="#">Summer</a></li><li><a href="#">Formal</a></li><li><a href="#">Casual</a></li></ul></div>
+                <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="#">Track Your Order</a></li><li><a href="#">Support</a></li><li><a href="#">FAQ</a></li><li><a href="#">Carrier</a></li><li><a href="#">About</a></li><li><a href="#">Contact Us</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>Copyright ©2026 All rights reserved | Made with ❤️ by Colorlib</p></div>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn">&#8679;</button>
+    <div id="toast"></div>
+
+    <script src="common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            initStickyHeader();
+            initScrollTop();
+            initAnnouncement('announcementTd', ['🔥 Sale Up To 50% Biggest Discounts!']);
+            document.getElementById('footerSubBtn').addEventListener('click', function (e) {
+                e.preventDefault();
+                const val = document.getElementById('footerEmail').value.trim();
+                if (!val) { showToast('⚠️ Vui lòng nhập email!'); return; }
+                if (!emailRegex.test(val)) { showToast('❌ Email không hợp lệ!'); return; }
+                showToast('🎉 Đăng ký thành công!');
+                document.getElementById('footerEmail').value = '';
+            });
+        });
+    </script>
+</body>
+</html>

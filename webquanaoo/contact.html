@@ -14,23 +14,23 @@
         <table class="centered-table" width="100%" cellspacing="0" cellpadding="0" border="0">
             <tr>
                 <td><div class="top-nav"><a href="home.html">About Us</a><a href="home.html">Privacy</a><a href="home.html">FAQ</a><a href="home.html">Careers</a></div></td>
-                <td class="header-right-top" style="width: 200%;">
+                <td class="header-right-top" style="width: 195%;">
                     <div class="top-nav-link"><span>My Wishlist</span><span class="separator">|</span><span>Track Your Order</span><span class="separator">|</span></div>
-                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" class="social-icon" width="17" height="17"></a>
-                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" class="social-icon" width="17" height="17"></a>
-                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" class="social-icon" width="17" height="17"></a>
-                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" class="social-icon" width="17" height="17"></a>
+                    <a href="#"><img src="/image/fb.png" class="social-icon" width="17" height="17"></a>
+                    <a href="#"><img src="/image/ins.png" class="social-icon" width="17" height="17"></a>
+                    <a href="#"><img src="/image/x.png" class="social-icon" width="17" height="17"></a>
+                    <a href="#"><img src="/image/yt.png" class="social-icon" width="17" height="17"></a>
                 </td>
             </tr>
             <tr>
-                <td width="33%" style="vertical-align: middle;"><div class="logo-wrap"><img src="/image/logi.png"width="50" height="50">3Tclothes</div></td>
+                <td width="33%" style="vertical-align: middle;"><div class="logo-wrap"><img src="/image/logi.png" width="50" height="50">3Tclothes</div></td>
                 <td width="34%" align="center" class="nav-link" style="vertical-align: middle; padding: 32px 0;">
                     <a href="home.html">Home</a><a href="men.html">Men</a><a href="women.html">Women</a><a href="pages.html">Pages</a><a href="blog.html">Blog</a><a href="contact.html" class="active-page">Contact</a>
                 </td>
                 <td width="33%" align="right" style="vertical-align: middle;">
-                    <a href="cart.html"><img src="https://cdn-icons-png.flaticon.com/512/1170/1170576.png" width="30" style="display:inline-block;"></a>
-                    <a href="login.html"><img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" width="30" style="display:inline-block;"></a>
-                    <a href="search.html"><img src="https://cdn-icons-png.flaticon.com/512/54/54626.png" width="30" style="display:inline-block;"></a>
+                    <a href="cart.html"><img src="/image/cart.png" width="30" style="display:inline-block;"></a>
+                    <a href="login.html"><img src="/image/account.png" width="30" style="display:inline-block;"></a>
+                    <a href="search.html"><img src="/image/searching.png" width="30" style="display:inline-block;"></a>
                 </td>
             </tr>
         </table>
@@ -40,7 +40,7 @@
     <table width="100%" border="0" bgcolor="black" cellpadding="25">
         <tr><td align="center" id="announcementTd">
             <font color="white" size="5">📞 Hỗ trợ 24/7 — Liên hệ ngay!</font>
-            <a href="#" style="color:#ffd700;font-size: 25px; font-weight:bold; text-decoration:underline;">Hotline</a>
+            <a href="#" style="color:#ffd700;font-size:25px;font-weight:bold;text-decoration:underline;">Hotline</a>
         </td></tr>
     </table>
 
@@ -85,7 +85,12 @@
             <div class="footer-container footer-flex">
                 <div class="subscribe-text"><h2>Subscribe Newsletter</h2><p>Subscribe to get 5% on all products.</p></div>
                 <div class="subscribe-form"><input type="email" placeholder="Enter your email" id="footerEmail"><button id="footerSubBtn">Subscribe</button></div>
-                <div class="social-links"><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="24" height="24"></a><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="24" height="24"></a><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733635.png" width="24" height="24"></a><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" width="24" height="24"></a></div>
+                    <div class="social-links"><a href="#">
+                        <img src="/image/fb.png" width="24" height="24"></a><a href="#">
+                        <img src="/image/ins.png" width="24" height="24"></a><a href="#">
+                        <img src="/image/x.png" width="24" height="24"></a><a href="#">
+                        <img src="/image/yt.png" width="24" height="24"></a>
+                    </div>
             </div>
         </div>
         <div class="main-footer">
@@ -106,15 +111,17 @@
     <script src="contact.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            initAnnouncement('announcementTd', ['📞 Hỗ trợ 24/7 — Liên hệ ngay!', '🚚 Free Shipping on Orders Over $100', '💳 Buy 2 Get 1 Free on Selected Items']);
-        });
-        document.getElementById('footerSubBtn').addEventListener('click', function (e) {
-            e.preventDefault();
-            const val = document.getElementById('footerEmail').value.trim();
-            if (!val) { showToast('⚠️ Vui lòng nhập email!'); return; }
-            if (!emailRegex.test(val)) { showToast('❌ Email không hợp lệ!'); return; }
-            showToast('🎉 Đăng ký thành công!');
-            document.getElementById('footerEmail').value = '';
+            initStickyHeader();
+            initScrollTop();
+            initAnnouncement('announcementTd', ['📞 Hỗ trợ 24/7 — Liên hệ ngay!']);
+            document.getElementById('footerSubBtn').addEventListener('click', function (e) {
+                e.preventDefault();
+                const val = document.getElementById('footerEmail').value.trim();
+                if (!val) { showToast('⚠️ Vui lòng nhập email!'); return; }
+                if (!emailRegex.test(val)) { showToast('❌ Email không hợp lệ!'); return; }
+                showToast('🎉 Đăng ký thành công!');
+                document.getElementById('footerEmail').value = '';
+            });
         });
     </script>
 </body>
