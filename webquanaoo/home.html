@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
-    <!-- HEADER -->
     <div class="header-wrapper" id="headerWrapper">
         <table class="centered-table" width="100%" cellspacing="0" cellpadding="0" border="0">
             <tr>
                 <td><div class="top-nav"><a href="home.html">About Us</a><a href="home.html">Privacy</a><a href="home.html">FAQ</a><a href="home.html">Careers</a></div></td>
-                <td class="header-right-top" style="width: 195%;">
+                <td class="header-right-top" style="width: 170%;">
                     <div class="top-nav-link"><span>My Wishlist</span><span class="separator">|</span><span>Track Your Order</span><span class="separator">|</span></div>
                     <a href="#"><img src="/image/fb.png" class="social-icon" width="17" height="17"></a>
                     <a href="#"><img src="/image/ins.png" class="social-icon" width="17" height="17"></a>
@@ -23,7 +22,7 @@
             </tr>
             <tr>
                 <td width="33%" style="vertical-align: middle;"><div class="logo-wrap">
-                    <img src="/image/logi.png" width="50" height="50">3Tclothes</div></td>
+                    <img src="/image/logi.png" width="60" height="60">3Tclothes</div></td>
                 <td  class="nav-link" style="vertical-align: middle; padding: 32px 0;">
                     <a href="home.html" class="active-page">Home</a>
                     <a href="men.html">Men</a><a href="women.html">Women</a>
@@ -31,15 +30,26 @@
                     <a href="contact.html">Contact</a>
                 </td>
                 <td width="33%" align="right" style="vertical-align: middle;">
-                    <a href="cart.html"><img src="/image/cart.png" width="30" style="display:inline-block;"></a>
-                    <a href="login.html"><img src="/image/account.png" width="30" style="display:inline-block;"></a>
-                    <a href="search.html"><img src="/image/searching.png" width="30" style="display:inline-block;"></a>
+                    <a  href="javascript:void(0)" onclick="toggleSearch()"><img src="/image/searching.png" width="30" style="display:inline-block;margin-right: 20px;"></a>
+                    <a href="login.html"><img src="/image/account.png" width="30" style="display:inline-block;margin-right: 20px;"></a>
+                    <a href="cart.html" class="cart-wrapper" style="position: relative; display: inline-block;">
+                        <img src="/image/cart.png" width="30" style="display:inline-block;">
+                            <span class="cart-badge" style="position: absolute; top: -8px;right: -8px; background: #ff2020; color: white; font-size: 12px;font-weight: bold;width:20px ;height:20px;border-radius:50%;display: flex;align-items: center;justify-content: center ;transition: transform 0.3s ease;">1</span></a>
                 </td>
             </tr>
         </table>
+        <div id="searchBar" style="display: none; position: absolute; top: 100%; left: 0; width: 100%; z-index: 999;">
+            <div style="width: 90%; max-width: 1200px; margin: 15px auto; display: flex; justify-content: center; align-items: center;">
+                
+                <div style="display: flex; align-items: center; background: #ff2020; padding: 10px 25px 10px 25px; border-radius: 50px; width: 100%; max-width: 600px; box-shadow: 0 4px 15px rgba(255,32,32,0.4);">
+                    <input type="text" placeholder="Search Here..." style="flex: 1; padding: 14px 15px; border: none; border-radius: 30px; outline: none; font-size: 16px; background: #fff; color: #333; font-family: inherit;">
+                    <button onclick="document.getElementById('searchBar').style.display='none'" style="background: transparent; border: none; color: white; font-size: 28px; cursor: pointer; line-height: 1; padding-left: 15px; margin: 0;">&times;</button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- ANNOUNCEMENT -->
+
     <table width="100%" border="0" bgcolor="black" cellpadding="25">
         <tr><td align="center" id="announcementTd">
             <font color="white" size="5">🔥 Sale Up To 50% Biggest Discounts. Hurry! Limited Period Offer</font>
@@ -47,13 +57,13 @@
         </td></tr>
     </table>
 
-    <!-- BANNER CHÍNH -->
+
     <div class="banner">
         <img id="banner" src="/image/bannernu2.jpg" >
         
     </div>
 
-    <!-- DANH MỤC MEN / WOMEN -->
+  
     <div class="container">
         <div class="category-grid" style="display:flex; gap:30px; justify-content:center; margin:50px auto;">
             <div class="card">
@@ -80,7 +90,7 @@
             <button class="nuttruoc" onclick="truottrai()">&#10094;</button>
             <div class="khungsanpham">
                 <div class="danhsachsanpham" id="danhsachsanpham">
-                    <!-- Sản phẩm 1 -->
+                  
                     <div class="sanpham">
                         <div class="anhsanpham">
                             <img src="/image/dongho.jpg" height="451px">
@@ -91,7 +101,7 @@
                         <h3>Đồng Hồ Cao Cấp</h3>
                         <p><span class="giamoi">$99.00</span><span class="giacu">$999.00</span></p>
                     </div>
-                    <!-- Sản phẩm 2 -->
+                 
                     <div class="sanpham">
                         <div class="anhsanpham">
                             <img src="/image/srm.jpg" height="451px">
@@ -102,7 +112,7 @@
                         <h3>Sữa Rửa Mặt CeraVe</h3>
                         <p><span class="giamoi">$98.00</span><span class="giacu">$120.00</span></p>
                     </div>
-                    <!-- Sản phẩm 3 -->
+          
                     <div class="sanpham">
                         <div class="anhsanpham">
                             <img src="/image/daychuyen.jpg" height="451px">
@@ -113,7 +123,7 @@
                         <h3>Dây Chuyền Bạc</h3>
                         <p><span class="giamoi">$59.00</span><span class="giacu">$100.00</span></p>
                     </div>
-                    <!-- Sản phẩm 4 -->
+             
                     <div class="sanpham">
                         <div class="anhsanpham">
                             <img src="/image/nhan.jpg" height="451px">
@@ -124,7 +134,7 @@
                         <h3>Nhẫn Kim Cương</h3>
                         <p><span class="giamoi">$75.00</span><span class="giacu">$120.00</span></p>
                     </div>
-                    <!-- Sản phẩm 5 -->
+        
                     <div class="sanpham">
                         <div class="anhsanpham">
                             <img src="/image/knot.jpg" height="451px">
@@ -135,7 +145,7 @@
                         <h3>Cà Vạt Nam</h3>
                         <p><span class="giamoi">$28.00</span><span class="giacu">$90.00</span></p>
                     </div>
-                    <!-- Sản phẩm 6 -->
+      
                     <div class="sanpham">
                         <div class="anhsanpham">
                             <img src="/image/guoc.jpg" height="451px">
@@ -152,7 +162,7 @@
         </div>
     </div>
 
-    <!-- FOOTER -->
+
     <footer class="site-footer">
         <div class="subscribe-area">
             <div class="footer-container footer-flex">
@@ -182,6 +192,16 @@
 
     <script src="common.js"></script>
     <script>
+        function toggleSearch() {
+            var searchBar = document.getElementById('searchBar');
+            if (searchBar.style.display === 'none' || searchBar.style.display === '') {
+                searchBar.style.display = 'block';
+                searchBar.querySelector('input').focus();
+            } else {
+                searchBar.style.display = 'none';
+            }
+        }
+        
         document.addEventListener('DOMContentLoaded', function () {
             initStickyHeader();
             initScrollTop();
@@ -191,7 +211,7 @@
                 '🎁 New Arrivals Every Week — Check Women Collection Now'
             ]);
             
-            // Banner slideshow
+         
             const bannerImg = document.getElementById("banner");
             const banners = [
                 "../image/bannernu2.jpg",
@@ -206,7 +226,7 @@
                 }, 3000);
             }
 
-            // Slider Product Logic
+    
             const danhsach = document.querySelector(".danhsachsanpham");
             window.truotphai = function(){
                 const dau = danhsach.children[0];
@@ -229,7 +249,7 @@
                 }, 10);
             }
 
-            // Footer subscribe
+    
             document.getElementById('footerSubBtn').addEventListener('click', function (e) {
                 e.preventDefault();
                 const val = document.getElementById('footerEmail').value.trim();

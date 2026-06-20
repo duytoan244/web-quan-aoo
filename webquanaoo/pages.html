@@ -13,7 +13,7 @@
         <table class="centered-table" width="100%" cellspacing="0" cellpadding="0" border="0">
             <tr>
                 <td><div class="top-nav"><a href="home.html">About Us</a><a href="home.html">Privacy</a><a href="home.html">FAQ</a><a href="home.html">Careers</a></div></td>
-                <td class="header-right-top" style="width: 195%">
+                <td class="header-right-top" style="width: 170%">
                     <div class="top-nav-link"><span>My Wishlist</span><span class="separator">|</span><span>Track Your Order</span><span class="separator">|</span></div>
                     <a href="#"><img src="/image/fb.png" class="social-icon" width="17" height="17"></a>
                     <a href="#"><img src="/image/ins.png" class="social-icon" width="17" height="17"></a>
@@ -31,9 +31,11 @@
                     <a href="blog.html">Blog</a><a href="contact.html">Contact</a>
                 </td>
                 <td width="33%" align="right" style="vertical-align: middle;">
-                    <a href="cart.html"><img src="/image/cart.png" width="30" style="display:inline-block;"></a>
-                    <a href="login.html"><img src="/image/account.png" width="30" style="display:inline-block;"></a>
-                    <a href="search.html"><img src="/image/searching.png" width="30" style="display:inline-block;"></a>
+                    <a href="search.html"><img src="/image/searching.png" width="30" style="display:inline-block;margin-right: 20px;"></a>
+                    <a href="login.html"><img src="/image/account.png" width="30" style="display:inline-block;margin-right: 20px;"></a>
+                    <a href="cart.html" class="cart-wrapper" style="position: relative; display: inline-block;">
+                        <img src="/image/cart.png" width="30" style="display:inline-block;">
+                            <span class="cart-badge" style="position: absolute; top: -8px;right: -8px; background: #ff2020; color: white; font-size: 12px;font-weight: bold;width:20px ;height:20px;border-radius:50%;display: flex;align-items: center;justify-content: center ;transition: transform 0.3s ease;">1</span></a>
                 </td>
             </tr>
         </table>
@@ -118,7 +120,9 @@
         <div class="subscribe-area">
             <div class="footer-container footer-flex">
                 <div class="subscribe-text"><h2>Subscribe Newsletter</h2><p>Subscribe to get 5% on all products.</p></div>
-                <div class="subscribe-form"><input type="email" placeholder="Enter your email" id="footerEmail"><button id="footerSubBtn">Subscribe</button></div>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" id="footerEmail">
+                    <button id="footerSubBtn">Subscribe</button></div>
                 <div class="social-links">
                     <a href="#"><img src="/image/fb.png" width="24" height="24"></a>
                     <a href="#"><img src="/image/ins.png" width="24" height="24"></a>

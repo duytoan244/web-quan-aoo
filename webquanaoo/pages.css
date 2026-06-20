@@ -1,8 +1,3 @@
-/* ===================================================
-   pages.css – Chỉ dùng cho trang Checkout (Thanh toán)
-   =================================================== */
-
-/* --- Container & Layout Checkout --- */
 .checkout-container {
     width: 86%;
     margin: 60px auto;
@@ -100,6 +95,7 @@ textarea {
     opacity: 0.9;
 }
 
+
 /* --- Cột Thông tin thanh toán & Đơn hàng --- */
 .billing-section {
     flex: 2;
@@ -171,4 +167,14 @@ textarea {
 @media(max-width:768px){
     .page-header h1 { font-size: 24px; }
     .billing-section h2, .order-box h2 { font-size: 28px; }
+}
+
+#footerSubBtn {
+    height: 100%;
+}
+#footerSubBtn:hover {
+    background: #cc0000;
+}
+.subscribe-form input {
+    border-radius: 4px 0 0 4px;
 }

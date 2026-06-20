@@ -1,8 +1,3 @@
-/* ============================================================
-   common.js – Các hàm dùng chung cho toàn bộ trang web
-   ============================================================ */
-
-// 1. Hiển thị Toast notification
 function showToast(message) {
     const toast = document.getElementById('toast');
     if (!toast) return;
@@ -17,7 +12,7 @@ function showToast(message) {
     }, 3000);
 }
 
-// 2. Khởi tạo Sticky Header
+
 function initStickyHeader() {
     const headerWrapper = document.getElementById('headerWrapper');
     if (!headerWrapper) return;
@@ -26,7 +21,7 @@ function initStickyHeader() {
     });
 }
 
-// 3. Khởi tạo Announcement Bar (xoay vòng thông báo)
+
 function initAnnouncement(containerId, messages) {
     const container = document.getElementById(containerId);
     if (!container) return;
@@ -43,7 +38,7 @@ function initAnnouncement(containerId, messages) {
     }, 3500);
 }
 
-// 4. Khởi tạo nút Scroll To Top
+
 function initScrollTop() {
     const btn = document.getElementById('scrollTopBtn');
     if (!btn) return;
@@ -55,10 +50,10 @@ function initScrollTop() {
     });
 }
 
-// 5. Hàm tiện ích cho validation email
+
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// 6. Khởi tạo chung khi DOM đã sẵn sàng
+
 document.addEventListener('DOMContentLoaded', function () {
     initStickyHeader();
     initScrollTop();

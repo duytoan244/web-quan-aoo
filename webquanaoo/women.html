@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="women.css">
 </head>
 <body>
-    <!-- HEADER -->
+  
     <div class="header-wrapper" id="headerWrapper">
         <table class="centered-table" width="100%" cellspacing="0" cellpadding="0" border="0">
             <tr>
@@ -18,12 +18,11 @@
                     <a href="home.html">FAQ</a>
                     <a href="home.html">Careers</a>
                 </div></td>
-                <td class="header-right-top" style="width: 195%;">
+                <td class="header-right-top" style="width: 170%;">
                     <div class="top-nav-link">
                         <span>My Wishlist</span><span class="separator">|</span>
                         <span>Track Your Order</span><span class="separator">|</span>
                     </div>
-                    <!-- Thay bằng link ảnh placeholder online -->
                     <a href="#"><img src="/image/fb.png" class="social-icon" width="17" height="17"></a>
                     <a href="#"><img src="/image/ins.png" class="social-icon" width="17" height="17"></a>
                     <a href="#"><img src="/image/x.png" class="social-icon" width="17" height="17"></a>
@@ -33,7 +32,7 @@
             <tr>
                 <td width="33%" style="vertical-align: middle;">
                     <div class="logo-wrap">
-                        <img src="/image/logi.png" width="50" height="50" alt="Logo">  
+                        <img src="/image/logi.png" width="60" height="60" alt="Logo">  
                         3Tclothes
                     </div>
                 </td>
@@ -46,15 +45,28 @@
                     <a href="contact.html">Contact</a>
                 </td>
                 <td width="33%" align="right" style="vertical-align: middle;">
-                    <a href="cart.html"><img src="/image/cart.png" width="30" style="display:inline-block;"></a>
-                    <a href="login.html"><img src="/image/account.png" width="30" style="display:inline-block;"></a>
-                    <a href="search.html"><img src="/image/searching.png" width="30" style="display:inline-block;"></a>
+                    <a  href="javascript:void(0)" onclick="toggleSearch()"><img src="/image/searching.png" width="30" style="display:inline-block;margin-right: 20px;"></a>
+                    <a href="login.html"><img src="/image/account.png" width="30" style="display:inline-block;margin-right: 20px;"></a>
+                    <a href="cart.html" class="cart-wrapper" style="position: relative; display: inline-block;">
+                        <img src="/image/cart.png" width="30" style="display:inline-block;">
+                            <span class="cart-badge" style="position: absolute; top: -8px;right: -8px; background: #ff2020; color: white; font-size: 12px;font-weight: bold;width:20px ;height:20px;border-radius:50%;display: flex;align-items: center;justify-content: center ;transition: transform 0.3s ease;">1</span></a>
                 </td>
             </tr>
         </table>
+        
+        <div id="searchBar" style="display: none; position: absolute; top: 100%; left: 0; width: 100%; z-index: 999;">
+            <div style="width: 90%; max-width: 1200px; margin: 15px auto; display: flex; justify-content: center; align-items: center;">
+                
+                <div style="display: flex; align-items: center; background: #ff2020; padding: 10px 25px 10px 25px; border-radius: 50px; width: 100%; max-width: 600px; box-shadow: 0 4px 15px rgba(255,32,32,0.4);">
+                    <input type="text" placeholder="Search Here..." style="flex: 1; padding: 14px 15px; border: none; border-radius: 30px; outline: none; font-size: 16px; background: #fff; color: #333; font-family: inherit;">
+                    <button onclick="document.getElementById('searchBar').style.display='none'" style="background: transparent; border: none; color: white; font-size: 28px; cursor: pointer; line-height: 1; padding-left: 15px; margin: 0;">&times;</button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- ANNOUNCEMENT -->
+
+   
     <table width="100%" border="0" bgcolor="black" cellpadding="25">
         <tr><td align="center" id="announcementTd">
             <font color="white" size="5">🔥 Sale Up To 50% Biggest Discounts. Hurry! Limited Period Offer</font>
@@ -74,10 +86,37 @@
             <!-- Sidebar -->
             <td valign="top" width="20%" style="padding: 16px; border-right: 1px solid #ccc;">
                 <div class="sidebar">
-                    <select class="filter-select"><option>Category</option></select>
-                    <select class="filter-select"><option>Type</option></select>
-                    <select class="filter-select"><option>Size</option></select>
-                    <select class="filter-select"><option>Color</option></select>
+                    <select class="filter-select">
+                        <option>Category</option>
+                        <option value="men">Men</option>
+                        <option value="women">Women</option>
+                        <option value="kids">Kids</option>
+                        <option value="accessories">Accessories</option>
+                    </select>
+
+                    <select class="filter-select">
+                        <option>Type</option>
+                        <option value="t-shirt">T-Shirt</option>
+                        <option value="jacket">Jacket</option>
+                        <option value="pants">Pants</option>
+                        <option value="shoes">Shoes</option>
+                    </select>
+
+                    <select class="filter-select">
+                        <option>Size</option>
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                    </select>
+
+                    <select class="filter-select">
+                        <option>Color</option>
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                    </select>
                     <h3>Filter by Price</h3>
                     <div class="price-slider">
                         <input type="range" min="0" max="500" value="250" id="priceRange">
@@ -211,6 +250,16 @@
     <script src="common.js"></script>
     <script src="women.js"></script>
     <script>
+        function toggleSearch() {
+            var searchBar = document.getElementById('searchBar');
+            if (searchBar.style.display === 'none' || searchBar.style.display === '') {
+                searchBar.style.display = 'block';
+                searchBar.querySelector('input').focus();
+            } else {
+                searchBar.style.display = 'none';
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', function () {
             initAnnouncement('announcementTd', [
                 '🔥 Sale Up To 50% Biggest Discounts. Hurry! Limited Period Offer',
@@ -226,6 +275,7 @@
             showToast('🎉 Đăng ký thành công!');
             document.getElementById('footerEmail').value = '';
         });
+        
     </script>
 </body>
 </html>
