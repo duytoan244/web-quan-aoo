@@ -9,7 +9,7 @@
     margin-top: 50px;
 }
 
-/* --- Thông báo & Login Box --- */
+
 .notice-box {
     background: #eceaea;
     padding: 18px 25px;
@@ -43,7 +43,7 @@
     gap: 20px;
 }
 
-/* --- Các ô Input & Nút bấm trong Form Checkout --- */
+
 input, select, textarea {
     width: 100%;
     padding: 18px 20px;
@@ -78,7 +78,7 @@ textarea {
     margin: 0;
 }
 
-/* --- Nút chính --- */
+
 .main-btn {
     background: #ff2020;
     color: white;
@@ -96,7 +96,7 @@ textarea {
 }
 
 
-/* --- Cột Thông tin thanh toán & Đơn hàng --- */
+
 .billing-section {
     flex: 2;
 }
@@ -158,7 +158,7 @@ textarea {
     transform: translateY(-3px);
 }
 
-/* --- Responsive --- */
+
 @media(max-width:992px){
     .checkout-content { flex-direction: column; }
     .form-row { flex-direction: column; gap: 0; }

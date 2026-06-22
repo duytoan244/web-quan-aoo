@@ -1,4 +1,4 @@
-// === 1. Price Slider ===
+
 const priceRange = document.getElementById('priceRange');
 const priceValue = document.getElementById('priceValue');
 if (priceRange && priceValue) {
@@ -10,7 +10,7 @@ if (priceRange && priceValue) {
     priceValue.textContent = '$' + priceRange.value;
 }
 
-// === 2. Product Card Hover & Add to Cart ===
+
 document.querySelectorAll('.product-card').forEach(function (card) {
     const btn = card.querySelector('.add-btn');
     if (btn) {

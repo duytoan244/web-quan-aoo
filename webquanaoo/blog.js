@@ -1,4 +1,3 @@
-// === 1. Blog Scroll Reveal ===
 const blogPosts = document.querySelectorAll('.blog-post');
 if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(function (entries) {
@@ -14,7 +13,7 @@ if ('IntersectionObserver' in window) {
     blogPosts.forEach(function (post) { post.classList.add('visible'); });
 }
 
-// === 2. Sidebar Search ===
+
 const searchBtn = document.getElementById('searchBtn');
 const searchInput = document.getElementById('searchInput');
 if (searchBtn && searchInput) {

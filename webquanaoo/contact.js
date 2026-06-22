@@ -1,4 +1,4 @@
-// === 1. Info Card Reveal ===
+
 const infoCards = document.querySelectorAll('.info-card');
 if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(function (entries) {
@@ -12,7 +12,7 @@ if ('IntersectionObserver' in window) {
     infoCards.forEach(function (card) { observer.observe(card); });
 }
 
-// === 2. Contact Form Validation ===
+
 const sendBtn = document.getElementById('sendBtn');
 if (sendBtn) {
     const nameInput = document.getElementById('nameInput');
